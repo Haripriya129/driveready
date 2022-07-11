@@ -1,0 +1,161 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration </title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    
+   </head>
+   <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.product{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.wrapper{
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: white;
+  box-shadow-color: none;
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 34px;
+}
+
+.wrapper h2{
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.wrapper h2::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: #4070f4;
+  border-radius: 12px;
+}
+
+.wrapper form{
+  margin-top: 30px;
+}
+
+.wrapper form .input-box{
+  height: 52px;
+  margin: 18px 0;
+}
+
+form .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background: ghostwhite;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow-color: none;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border-bottom-width: 2.5px;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #4070f4;
+}
+
+form .policy{
+  display: flex;
+  align-items: center;
+}
+
+form h3{
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.input-box.button input{
+  color: #fff;
+  letter-spacing: 2px;
+  border: none;
+  background: #0000ff;
+  cursor: pointer;
+}
+
+.input-box.button input:hover{
+  background: #0000ff;
+  color: #000;
+}
+   </style>
+<body>
+   <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"style="color:white" href="#"><b>Easy Booking</b></a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/register22"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/prologin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="product">
+    <div class="wrapper">
+      <h2>Registration</h2>
+      <form action="/userregistration" method="post">
+        <div class="input-box">
+          <input type="text" placeholder="Enter Your Name" required name="name">
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Enter Your Email" required name="email">
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Create password" required name="password">
+        </div>
+        <div class="policy">
+          <input type="checkbox">
+          <h3>I Accept all terms & Condition</h3>
+        </div>
+        <div class="input-box button">
+            <input type="submit" value="Register Now">
+        </div>
+        <div class="text">
+          <h3>Alredy have an Account? <a href="/prologin">Login Now</a></h3>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

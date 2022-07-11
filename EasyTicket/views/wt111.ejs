@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.product{
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.wrapper{
+    margin-top: 5%;
+  position: relative;
+  max-width: 570px;
+  width: 100%;
+  background: white;
+  box-shadow-color: none;
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 50px;
+}
+
+
+.wrapper form{
+  margin-top: 10px;
+}
+
+.wrapper form .input-box{
+  height: 30px;
+  margin: 18px 0;
+}
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #4070f4;
+}
+    </style>
+    <body>
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand active"style="color:white" href="#"><b>Easy Booking</b></a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/register22"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/prologin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="product">
+<center>
+        <div class="wrapper">
+        <h1>Movie Tickets Booking</h1><hr>
+        <form action="#" >
+                <div class="input-box">
+                <label>MovieName</label>
+                <select name="Moviename" id="t2" style="width:200px;heigth:20px" required>
+                        <option>---select---</option>
+                        <option>KGF2</option>
+                        <option>BEST</option>
+                        <option>ACHARYA</option>
+                        <option>RRR</option>
+                        <option>GANI</option>
+                        <option>JAMES</option>
+                        <option>SUPERMACHI</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                <label>TheaterName</label>
+                <select name="theater" id="t1" required>
+                        <option>---select---</option>
+                        <option>Sree Veerabhardra AC Dts</option>
+                        <option>lalitha multiplex</option>
+                        <option>J.V.R Cinema hall</option>
+                        <option>Anusri Cinemas</option>
+                        <option>Krishnaveni Theatre</option>
+                        <option>Satya Krishna Theatre</option>
+                        <option>Suryarama Mahal theatre</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                <label>Show Time</label>
+                <input type="radio" name="r1" value=" 11:15am (morning show)" id="rr1" required>11:15am
+                    <input type="radio" name="r1" value=" 02:00pm (afternoon show)" id="rr2" required>02:00pm
+                    <input type="radio" name="r1" value=" 06:15pm (evening show)" id="rr3" required>06:15pm
+                    <input type="radio" name="r1" value=" 09:30pm (night show)" id="rr4" required>09:30pm
+                </div>
+                <div class="input-box">
+                <label>No.of Tickets:</label>
+                <input type="number" style="width: 100px" id="n1" required>
+            </div>
+                <div class="input-box">
+                <input type="button" value="Submit" style="background-color: skyblue" onClick="data()">
+            </div>
+        <script>
+            function data() {
+                if (document.getElementById("rr1").checked) {
+                    var f = document.getElementById("t2").value;
+                    var a = document.getElementById("t1").value;
+                    var c = document.getElementById("n1").value;
+                    var d = c * 200;
+                    var s = document.getElementById("rr1").value;
+                }else if (document.getElementById("rr1").checked) {
+                    var f = document.getElementById("t2").value;
+                    var a = document.getElementById("t1").value;
+                    var c = document.getElementById("n1").value;
+                    var d = c * 200;
+                    var s = document.getElementById("rr1").value;
+                } else if (document.getElementById("rr2").checked) {
+                    var f = document.getElementById("t2").value;
+                    var a = document.getElementById("t1").value;
+                    var c = document.getElementById("n1").value;
+                    var d = c * 200;
+                    var s = document.getElementById("rr2").value;
+
+                } else if (document.getElementById("rr3").checked) {
+                    var f = document.getElementById("t2").value;
+                    var a = document.getElementById("t1").value;
+                    var c = document.getElementById("n1").value;
+                    var d = c * 200;
+                    var s = document.getElementById("rr3").value;
+
+                } else if (document.getElementById("rr4").checked) {
+                    var f = document.getElementById("t2").value;
+                    var a = document.getElementById("t1").value;
+                    var c = document.getElementById("n1").value;
+                    var d = c * 200;
+                    var s = document.getElementById("rr4").value;
+
+                }
+
+                document.write("<html>");
+                document.write("<center>");
+                document.write("<body text-align:center>");
+                document.write("<h2>"+"TICKET BOOKED"+"</h2>")
+                document.write("<div style=height:500px;width:550px;border-radius:30px;background-color:ghostwhite>");
+                document.write("<table height=490px width=550px>");
+                document.write("<tr>");
+                document.write("<th>MovieName</th>");
+                document.write("<td>" + f + "</td>");
+                document.write("</tr>");
+                document.write("<tr>");
+                document.write("<th>TheaterName</th>");
+                document.write("<td>" + a + "</td>");
+                document.write("</tr>");
+                document.write("<tr>");
+                document.write("<th>ShowTime</th>");
+                document.write("<td>" + s + "</td>");
+                document.write("</tr>");
+                document.write("<tr>");
+                document.write("<th>Tickets</th>");
+                document.write("<td>" + c + "</td>");
+                document.write("</tr>");
+                document.write("<tr>");
+                document.write("<th>TotalAmount</th>");
+                document.write("<td>" + d + "</td>");
+                document.write("</tr>");
+                document.write("</table>");
+                document.write("</div>");
+                document.write("<button >pay</button>");
+                document.write("</body>");
+                document.write("</center>");
+                document.write("</html>");
+
+               
+            }
+        </script>
+    </form>
+</div>
+    </body>
+</center></div>
+</html>
